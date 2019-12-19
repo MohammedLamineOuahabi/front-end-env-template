@@ -1,0 +1,26 @@
+npm i gulp-sass browser-sync --save-dev
+npm install --save-dev gulp-htmlmin
+npm install --save-dev gulp-babel @babel/core @babel/preset-env
+js files
+delete file on src
+Ignore Directories in git
+/node_modules
+/web/css
+Cache bust task 
+function cacheBust(src, dest) {
+    var cbString = new Date().getTime();
+    return gulp
+      .src(src)
+      .pipe(
+        replace(/cb=\d+/g, function() {
+          return "cb=" + cbString;
+        })
+      )
+      .pipe(gulp.dest(dest));
+  }
+
+
+
+  problems solutions :
+  * git CRLF error git config --global core.autocrlf false
+  

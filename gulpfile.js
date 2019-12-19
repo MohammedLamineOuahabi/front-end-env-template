@@ -4,8 +4,6 @@ const del = require("del");
 const babel = require("gulp-babel");
 const cache_bust = require('gulp-cache-bust');
 
-//html
-const htmlmin = require("gulp-htmlmin");
 
 //sass packages
 const sass=require('gulp-sass');
@@ -25,7 +23,7 @@ main_js       = 'main.js',
 src_html      = './src/*.html',
 dist_html     = './dist/',
 scss          = './src/sass/',
-sub_scss      = './src/sass/sub_scss/**/*.scss',
+sub_scss      = './src/sass/**/*.scss',
 src_js        = './src/js/**/*.js',
 dist_js       = './dist/js/',
 css           = './dist/css/';
@@ -40,7 +38,7 @@ function _concat_scss(){
 //  convert scss to css
 function _sass_to_css() {
     return gulp.src(scss+main_scss)
-      .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+      .pipe(sass({outputStyle: 'expanded',includePaths: sub_scss}).on('error', sass.logError))
       .pipe(postcss([autoprefixer(), cssnano()]))
       .pipe(cache_bust({type: 'timestamp'}))
       .pipe(gulp.dest(css));
@@ -73,8 +71,8 @@ function _serve() {
         server: dist
     });
 
-    gulp.watch(sub_scss, _concat_scss);    
-    gulp.watch(scss+main_scss, _sass_to_css);    
+    //gulp.watch(sub_scss, _concat_scss);    
+    gulp.watch(sub_scss, _sass_to_css);    
     gulp.watch(src_js, _js);
     gulp.watch(src_html,_html)
     gulp.watch(dist_html).on('change', browserSync.reload);

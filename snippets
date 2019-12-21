@@ -1,0 +1,46 @@
+gulp :
+*********
+!exclude src
+
+//  concat scss files to main_scss 
+function _concat_scss(){
+    console.log(main_scss);  
+    return gulp.src(sub_scss )
+    .pipe(concat(main_scss))
+	.pipe(gulp.dest(scss));
+}
+
+gulp.task('taskA', function () {
+// 要打包 JavaScript 的 source code  
+  gulp.src([
+    'a.js',
+    'b.js',
+    'c.js'
+  ])
+    .pipe(concat('bundle.js')) // 打包起來輸出的檔案名稱
+    .pipe(gulpUglify())  // uglify
+    .pipe(gulp.dest('javascript/minify')); // 輸出路徑
+});
+
+// Optimize Images
+function images() {
+  return gulp
+    .src("./assets/img/**/*")
+    .pipe(newer("./_site/assets/img"))
+    .pipe(
+      imagemin([
+        imagemin.gifsicle({ interlaced: true }),
+        imagemin.jpegtran({ progressive: true }),
+        imagemin.optipng({ optimizationLevel: 5 }),
+        imagemin.svgo({
+          plugins: [
+            {
+              removeViewBox: false,
+              collapseGroups: true
+            }
+          ]
+        })
+      ])
+    )
+    .pipe(gulp.dest("./_site/assets/img"));
+}

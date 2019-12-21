@@ -9,5 +9,7 @@ npm install --save-dev gulp-babel @babel/core @babel/preset-env
 
 
   todo:
-merge just imported js files into one js
+* merge just imported js files into one js
+* add bootstrap,normalize support with enable/disable option
+
  

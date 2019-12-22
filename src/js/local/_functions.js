@@ -1,3 +1,4 @@
-module.exports = function(str) {
-    alert(str); 
-};  
+function foo (str) {
+  console.log(str);
+}
+module.exports=foo; 

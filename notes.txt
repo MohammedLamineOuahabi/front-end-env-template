@@ -1,3 +1,8 @@
+infos:
+ES6(2015):new definitions like classes,...
+ES6 import person from ....require is nodejs
+oop inheritance : class Adult extends Person{payTax(){}}
+
 npm i gulp-sass browser-sync --save-dev
 npm install --save-dev gulp-htmlmin
 npm install --save-dev gulp-babel @babel/core @babel/preset-env
@@ -9,7 +14,12 @@ npm install --save-dev gulp-babel @babel/core @babel/preset-env
 
 
   todo:
-* merge just imported js files into one js
+* merge just imported js files into one js -done
 * add bootstrap,normalize support with enable/disable option
+* babel for ES6 support
+* add snippets system
+* Preparing Our Files for Go Live 
+* webpack cache bust
+
 
  

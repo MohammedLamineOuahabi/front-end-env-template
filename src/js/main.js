@@ -3,7 +3,7 @@
 ***********************************/
 var $=require('jquery');
 //don't forget to install jquery
-$("h1").remove();
+//$("h1").remove();
 
 /**********************************
           dynamic modules:

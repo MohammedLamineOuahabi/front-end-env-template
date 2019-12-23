@@ -16,10 +16,13 @@ npm install --save-dev gulp-babel @babel/core @babel/preset-env
   todo:
 * merge just imported js files into one js -done
 * add bootstrap,normalize support with enable/disable option
-* babel for ES6 support
+* babel for ES6 support -done
 * add snippets system
 * Preparing Our Files for Go Live 
 * webpack cache bust
 
+
+shortcuts
+*indenting Shift + Alt + F
 
  

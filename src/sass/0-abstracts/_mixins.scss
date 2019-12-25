@@ -1,25 +1,13 @@
-@define-mixin atSmall {
-    @media (min-width: 530px) {
-      @mixin-content;
-    }
+
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
   }
-  
-  @define-mixin atMedium {
-    @media (min-width: 800px) {
-      @mixin-content;
-    }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
   }
-  
-  @define-mixin atLarge {
-    @media (min-width: 1010px) {
-      @mixin-content;
-    }
-  }
-  
-  @define-mixin clearfix {
-    &::after {
-      content: "";
-      clear: both;
-      display: table;
-    }
-  }
+}

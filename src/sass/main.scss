@@ -2,15 +2,27 @@
 Note: There’s no need to include the _ or .scss 
 file extension when importing.
 */
+//*****************************
+//import  vendors styles   ****
+//*****************************
+@import 'normalize.css';
+// @import 'bootstrap';
+// @import 'jquery-ui';
+
+//*****************************
+//import  vendors styles   ****
+//*****************************
+
  @import '0-abstracts/_variables';
  @import '0-abstracts/_functions';
  @import '0-abstracts/_mixins';
 
-// @import '6-vendors/_bootstrap';
-// @import '6-vendors/_jquery-ui';
-
  @import '2-base/_global';
  @import '2-base/_typography';
+
+ @import '3-components/_buttons';
+// @import '3-components/_carousel';
+// @import '3-components/_slider';
 
 // @import '4-layout/_navigation';
 // @import '4-layout/_grid';
@@ -18,10 +30,8 @@ file extension when importing.
 // @import '4-layout/_footer';
 // @import '4-layout/_sidebar';
 // @import '4-layout/_forms';
+@import '4-layout/_large-hero';
 
-// @import '3-components/_buttons';
-// @import '3-components/_carousel';
-// @import '3-components/_slider';
 
 // @import '5-pages/_home';
 // @import '5-pages/_about';

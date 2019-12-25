@@ -11,18 +11,17 @@ const sourcemaps   = require('gulp-sourcemaps');
 const cssVars      = require('postcss-simple-vars');// you can use $variable to write postCSS code
 const cssImport    = require('postcss-import');     // using @import
 const hex2rgba     = require('postcss-hexrgba');    // you can use rgba($color, opacity)
-const mixins       = require('postcss-mixins');     // mixins
 const cssNested    = require('postcss-nested');     // nesting
 
 // scss to css   
 function _sass_to_css() { 
   
-  var plugins = [
-    cssImport,
-    mixins,
-    cssVars,
+  var plugins = [    
+    cssImport,  
+    cssVars,   
     cssNested,
     hex2rgba,
+ //   cssnano,
     autoprefixer
 ];
     return gulp.src(paths.scss+paths.main_scss)

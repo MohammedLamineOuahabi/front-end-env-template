@@ -2,6 +2,7 @@ infos:
 ES6(2015):new definitions like classes,...
 ES6 import person from ....require is nodejs
 oop inheritance : class Adult extends Person{payTax(){}}
+gulIf you want to disable Preview Mode all together, you can do so by setting "workbench.editor.enablePreview": false in your settings file. You can also use the "workbench.editor.enablePreviewFromQuickOpen" option to disable it only from the quick open menu.
 
 npm i gulp-sass browser-sync --save-dev
 npm install --save-dev gulp-htmlmin

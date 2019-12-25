@@ -1,0 +1,7 @@
+24/12/2019
+- remove vendors folder from src/sass/
+- add & test normalize.css library
+- add realise-notes files in the root
+25/11/2019
+-integrate postcss-mixins in the workflow
+

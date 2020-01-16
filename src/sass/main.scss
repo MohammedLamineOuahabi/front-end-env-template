@@ -5,7 +5,7 @@ file extension when importing.
 //*****************************
 //import  vendors styles   ****
 //*****************************
-@import 'normalize.css';
+//@import 'normalize.css';
 // @import 'bootstrap';
 // @import 'jquery-ui';
 
@@ -19,18 +19,22 @@ file extension when importing.
 
  @import '2-base/_global';
  @import '2-base/_typography';
+ @import '2-base/_wrapper';
 
+ @import '3-components/_primary-nav';
  @import '3-components/_buttons';
-// @import '3-components/_carousel';
-// @import '3-components/_slider';
+ @import '3-components/_carousel';
+ @import '3-components/_slider';
 
-// @import '4-layout/_navigation';
+
 // @import '4-layout/_grid';
-// @import '4-layout/_header';
-// @import '4-layout/_footer';
+@import '4-layout/_header'; 
+@import '4-layout/_large-hero';
 // @import '4-layout/_sidebar';
 // @import '4-layout/_forms';
-@import '4-layout/_large-hero';
+ //@import '4-layout/_contact_me';
+ //@import '4-layout/_footer';
+
 
 
 // @import '5-pages/_home';
@@ -39,6 +43,3 @@ file extension when importing.
 
 // @import '7-themes/_theme';
 // @import '7-themes/_admin';
-
-
-@import './_test';

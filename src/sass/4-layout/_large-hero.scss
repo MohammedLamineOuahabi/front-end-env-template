@@ -1,39 +1,98 @@
 .large-hero {
   position: relative;
 
-  &__text-content {
-    position: absolute;
-    text-align: center;
+
+  &__background {
     width: 100%;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  &__title {
-    font-weight: 400;
-    font-size: 2.3rem;
-    color: $mainBlue;
-    margin: 0;
-    @include tablet {
-      font-size: 18px;
-    }
-    @include desktop {
-      font-size: 28px;
-    }
-  }
-  &__subtitle {
-    font-weight: 300;
-    font-size: 1.2rem;
-    color: $mainBlue;
-    margin: 0;
+    height: 400px;
+    //filter: blur(1px);
+    // background-image: radial-gradient(circle, #051937, #062045, #072753, #092e62, #0d3571);
+    
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding-top: 100px;
+    padding-bottom: 0px;
+    background-color: #191b1d;
+    background-image: url(../imageS/herobg.png);
+    background-position: 50% 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+
   }
 
-  &__desc {
-    font-weight: 300;
-    font-size: 0.875rem;
-    color: #fff;
-    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
-    width: 30rem;
-    margin: 0 auto;
-    padding-top: 36px;
+
+  &__content {
+
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 50px;
+    width:100%;
+   
+
+    &__avatar {
+      height: 100px;
+      width: 100px;
+    }
+
+
+    &__title {
+      font-size: 2.8rem;
+      color:   $light-color;
+      padding-bottom:10px;
+      
+      @include tablet {
+        padding-top:20px;
+        padding-bottom:10px;
+        font-size: 3.5rem;
+      }
+      @include desktop {
+        padding-bottom:10px;
+        padding-top:20px;
+        font-size: 4.5rem;
+      }
+
+    }
+
+    &__subtitle {
+
+      text-transform: uppercase;
+      color: $light-color;
+      padding-top:10px;
+      padding-bottom:15px;
+      font-size: 1rem;
+      width: 250px;
+      margin:0 auto;
+
+      @include tablet {
+        font-size: 1.4rem;
+        width: 350px;
+      }
+      @include desktop {
+        font-size: 2rem;
+        width: 500px;
+      }
+
+      &__hr {
+      border: 0;
+      height: 1px;
+      background: #333;
+      background-image: linear-gradient(to right, #ccc, #fff, #ccc);
+    }
+    &__desc {
+
+
+
+
+       @include tablet {
+      
+      }
+      @include desktop {
+        font-size: 1.4rem;
+      }
+    }
+    }
   }
 }

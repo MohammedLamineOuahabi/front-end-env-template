@@ -1,14 +1,37 @@
 .btn {
-  background-color: $mainBlue;
-  color: #fff;
+  background-color: $btn-color;
+  color: $dark-color;
   text-decoration: none;
-  padding: 0.75rem 1.2rem;
+  font-weight:500;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5%;
   display: inline-block; //not like inline we can set width & height and don't break the line like block
+ 
+
   &__orange {
     background-color: $mainOrange;
   }
-  &__large {
-   font-size: 1.25rem;
-   padding:1.1rem 1.9rem;
+
+  &__transparent {
+    color:$light-color;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: 1px solid #fff;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    transition-delay: 0.1s;
   }
+  &__transparent:hover{
+    color:$dark-color;
+    background-color:$light-color;
+  }
+
+  &__large {
+    font-size: 1.25rem;
+    padding: 1.1rem 1.9rem;
+  }
+
 }
+

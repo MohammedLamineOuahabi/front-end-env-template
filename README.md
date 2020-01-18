@@ -23,6 +23,6 @@
   
 
 ### main Tasks
-  - gulp clean
-  - gulp charge
-  - gulp
+  - gulp clean     : remote the **"dist"** folder (Production folder )
+  - gulp recharge  : regenerate the **"dist"** folder  
+  - gulp           : watching

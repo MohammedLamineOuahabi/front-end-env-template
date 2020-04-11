@@ -48,6 +48,9 @@
 .*
 ~*
 
+# ignore parcel cache directorie
+.Cache/
+
 # ignore node/grunt dependency directories
 node_modules/
 

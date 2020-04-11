@@ -1,6 +1,6 @@
 
-## Gulp & Web Pack front end development environment
-** The main goal is to automate the maximum number of tasks in the process of development  **
+## Front end development environment using parcel bundler
+** Simplify Starting new serious front end development project  **
 ### Languages
   - html
   - css
@@ -19,10 +19,9 @@
     - css
     - sass
     - index.html
-  - gulp
+  
   
 
 ### main Tasks
-  - gulp clean     : remove the **"dist"** folder (Production folder )
-  - gulp recharge  : regenerate the **"dist"** folder  
-  - gulp           : watching
+  - npm run dev    : dev bundling to **"dist"** folder 
+  - npm run build  : production bundeling to **"dist"** folder  
